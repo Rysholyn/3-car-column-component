@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/* - Font size: 15px
+- Mobile: 375px - Desktop: 1440px*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--very-light-gray);
+    font-family: 'Lexend Deca',sans-serif;
+    font-weight: 400;
+}
+
+.brochure {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 920px;
+    overflow: hidden;
+    border-radius: 8px;
+    text-align: left;
+}
+
+article {
+    padding: 48px 50px 49px 48px;
+}
+
+.sedan {
+    background-color: var(--bright-orange);
+}
+
+.suv {
+    background-color: var(--dark-cyan);
+    padding-right: 40px;
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+    padding-right: 41px;
+}
+
+h1 {
+    color: var(--very-light-gray);
+    padding: 32px 0 18px 0;
+    font-family: "Big Shoulders Display",sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+p {
+    color: var(--transparent-white);
+    font-size: 15px;
+    line-height: 25px;
+    padding-top: 6px;
+    padding-bottom: 29px;
+
+}
+
+button {
+    margin-top: 53px;
+    padding: 15px 32px;
+    border-radius: 30px;
+    border-style: none;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+}
+
+.sedanbutt {
+    color: var(--bright-orange);
+}
+
+:hover.sedanbutt {
+    border: 3px solid var(--transparent-white);
+    cursor: pointer;
+    background-color: var(--bright-orange);
+    color: var(--transparent-white);
+    padding: 12px 29px;
+}
+
+.suvbutt {
+    color: var(--dark-cyan);
+}
+
+:hover.suvbutt {
+    border: 3px solid var(--transparent-white);
+    cursor: pointer;
+    background-color: var(--dark-cyan);
+    color: var(--transparent-white);
+    padding: 12px 29px;
+    outline: 3px;
+}
+
+.luxbutt {
+    color: var(--very-dark-cyan)
+}
+
+:hover.luxbutt {
+    border: 3px solid var(--transparent-white);
+    cursor: pointer;
+    background-color: var(--very-dark-cyandark-cyan);
+    color: var(--transparent-white);
+    padding: 12px 29px;
+}
+
+@media only screen and (max-width: 750px) {
+    .brochure {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* width: 328px; */
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    
+    .brochure {
+        grid-template-columns: 1fr;
+        width: 328px;
+        max-height: 1400px;
+    }
+
+    p {
+        padding-bottom: .5px;
+    }
+
+    .luxury {
+        background-color: var(--very-dark-cyan);
+        padding-right: 51px;
+    }
+
+    button {
+        margin-top: 31px;
+    }
+}
